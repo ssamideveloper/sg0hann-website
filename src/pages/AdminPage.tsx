@@ -27,8 +27,9 @@ const AdminPage: React.FC = () => {
   const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   // Admin credentials (in a real app, this would be handled securely on the server)
-  const ADMIN_USERNAME = 'gohan';
-  const ADMIN_PASSWORD = 'gohan';
+  const ADMIN_USERNAME = process.env.NEXT_PUBLIC_ADMIN_USERNAME;
+  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD;
+
 
   useEffect(() => {
     if (isAuthenticated) {
